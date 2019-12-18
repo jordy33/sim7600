@@ -20,7 +20,7 @@ Using Nautilus replace all the contents from the boot directory into the SD card
 
 * Copy rootfs folder into rootfs partition
 
-You cant use Nautilus. The roofs only can be write by root
+You cant use Nautilus. The rootfs only can be write by root
 Do the following commands
 
 ```
