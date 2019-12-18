@@ -15,7 +15,7 @@ git clone https://github.com/jordy33/sim7600.git
 
 * Copy boot folder into boot partition
 ```
-Using Nautilus all the contents from the boot directory into the SD card on the boot partition
+Using Nautilus replace all the contents from the boot directory into the SD card on the boot partition
 ```
 
 * Copy rootfs folder into rootfs partition
