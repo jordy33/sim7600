@@ -44,7 +44,7 @@ Insert the SD card in the raspberry pi and boot.
 
 ### Connect to the raspberry pi the waveshare module using a USB cable
 
-Also set the yellow jumpers as is shown in the picture
+Also set the yellow jumpers as shown in the picture
 
 ![](/images/connection.jpg?raw=true)
 
