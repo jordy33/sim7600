@@ -119,4 +119,56 @@ Sim Card Status:
 ```
 sudo qmicli --device=/dev/cdc-wdm0 --uim-get-card-status
 ```
+### Install Required Software
 
+```
+sudo apt-get update && sudo apt-get install libqmi-utils udhcpc
+```
+
+### Press the power button or pull low GPIO pin 4 to turn on the SIM
+
+Putting online the adapter
+```
+sudo qmicli -d /dev/cdc-wdm0 --dms-set-operating-mode='online'
+```
+
+Note, you can verify if your radio needs to be turned on by using the following commands:
+
+```
+qmicli -d /dev/cdc-wdm0 --dms-get-operating-mode
+qmicli -d /dev/cdc-wdm0 --nas-get-signal-strength
+qmicli -d /dev/cdc-wdm0 --nas-get-home-network
+```
+
+If the first command shows in its output 'Low Power' or anything other than 'online' it means your radio is off and needs to be turned on.
+The last of those commands should return the LTE network ID if your device successfully connected.
+
+### Reconfigure the network interface for raw-ip protocol
+
+The qmi-wwan kernel driver creates the wwan0 network interface for you when it detects the SIM7600 module connected to your Raspberry Pi. By default that interface is set to 802-3 protocol, however it seems the correct protocol should be raw-ip. The qmi-network script tries to set that up for you, but it will most likely fail. To make the change, do the following:
+
+```
+
+sudo qmicli -d /dev/cdc-wdm0 -w
+sudo ip link set wwan0 down
+echo 'Y' | sudo tee /sys/class/net/wwan0/qmi/raw_ip
+sudo ip link set wwan0 up
+```
+
+### Connect to the mobile network.
+
+```
+qmicli -p -d /dev/cdc-wdm0 --device-open-net='net-raw-ip|net-no-qos-header' --wds-start-network="apn='internet.itelcel.com',username='webgprs',password='webgprs2002',ip-type=4" --client-no-release-cid
+```
+
+### Finally, configure the IP address and the default route with udhcpc:
+```
+sudo udhcpc -i wwan0
+```
+
+Testing
+```
+ip r s
+
+ping -4 www.google.com
+```
