@@ -58,8 +58,9 @@ sudo apt-get install screen
 sudo screen /dev/cu.usbserial-A506LNW8 115200
 ```
 * In the raspberry pi Disconnect any cable in the ethernet port
+* All the following commands are executed in the raspberry pi
 
-### Installin Qualcomm QMI interface in the raspberry pi
+### Installing Qualcomm QMI interface
 
 Configure Locales
 ```
