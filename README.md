@@ -45,7 +45,7 @@ Insert the SD card in the raspberry pi and boot.
 
 ![](/images/rasp-uart.png?raw=true)
 
-Replace with your serial port te following command
+Replace with your serial port the following command
 ```
 sudo screen /dev/cu.usbserial-A506LNW8 115200
 ```
