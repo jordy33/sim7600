@@ -62,11 +62,6 @@ Password:
 raspberry
 ```
 
-In the PC execute the following commands to connect to the raspberry pi. Replace with your serial port.
-```
-sudo apt-get install screen
-sudo screen /dev/cu.usbserial-A506LNW8 115200
-```
 * Make sure that the raspberry pi is connected with the ethernet port to the internet
 * All the following commands are executed in the raspberry pi
 
@@ -163,6 +158,11 @@ sudo apt-get update && sudo apt-get install libqmi-utils udhcpc
 
 ![](/images/rasp-uart.png?raw=true)
 
+In the PC execute the following commands to connect to the raspberry pi. Replace with your serial port.
+```
+sudo apt-get install screen
+sudo screen /dev/cu.usbserial-A506LNW8 115200
+```
 
 Putting online the adapter
 ```
