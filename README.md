@@ -48,16 +48,26 @@ Also set the yellow jumpers as shown in the picture
 
 ![](/images/connection.jpg?raw=true)
 
-### In the PC, Connect via USB-UART adapter to the raspberry pi using the GPIO pins
 
-![](/images/rasp-uart.png?raw=true)
+### Connect the raspberry to the internet with the ethernet cable
+
+Login via ssh (change the command below with your ip) 
+```
+ssh pi@192.168.100.1
+```
+
+Password:
+
+```
+raspberry
+```
 
 In the PC execute the following commands to connect to the raspberry pi. Replace with your serial port.
 ```
 sudo apt-get install screen
 sudo screen /dev/cu.usbserial-A506LNW8 115200
 ```
-* In the raspberry pi Disconnect any cable in the ethernet port
+* Make sure that the raspberry pi is connected with the ethernet port to the internet
 * All the following commands are executed in the raspberry pi
 
 ### Installing Qualcomm QMI interface
@@ -145,6 +155,13 @@ sudo qmicli --device=/dev/cdc-wdm0 --uim-get-card-status
 ```
 sudo apt-get update && sudo apt-get install libqmi-utils udhcpc
 ```
+
+* The installation is over. Logoff from ssh session. Disconnect the raspberry from the internet (ethernet cable) 
+
+
+### In the PC, Connect via USB-UART adapter to the raspberry pi using the GPIO pins
+
+![](/images/rasp-uart.png?raw=true)
 
 
 Putting online the adapter
