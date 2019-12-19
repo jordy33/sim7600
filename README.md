@@ -1,5 +1,7 @@
 ## Raspbian kernel 4.19.88-v7+ with drivers for SIM7600
 
+![](/images/sim7600.png?raw=true)
+
 ### Tested with Raspbian Buster
 
 How to install
