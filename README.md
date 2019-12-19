@@ -32,12 +32,22 @@ enable_uart=1
 You cant use Nautilus. The rootfs only can be write by root
 Do the following commands
 
+Connect to the raspberry using a serial connection
+
+
 ```
 sudo -i
 cd /media/$USER/rootfs/lib/modules
 cp -fr /home/$USER/sim7600/rootfs/lib/modules/* .
 ``` 
 
+Connect via  Serial using an UART-USB
+
+![](/images/rasp-uart.png?raw=true)
+
+```
+sudo screen /dev/cu.usbserial-A506LNW8 115200
+```
 
 ### Installing Qualcomm QMI interface 
 
@@ -66,6 +76,8 @@ sudo make install
 ```
 ### Press the power button or pull low GPIO pin 4 to turn on the SIM7600 HAT
 
+![](/images/push.jpg?raw=true)
+
 Verify that you have the qmi_wwan driver
 ```
 lsusb -t
@@ -75,13 +87,6 @@ Can look like this
 Port 4: Dev 4, If 5, Class=Vendor Specific Class, Driver=qmi_wwan, 480M
 ```
 
-Connect via  Serial using an UART-USB
-
-![](/images/rasp-uart.png?raw=true)
-
-```
-sudo screen /dev/cu.usbserial-A506LNW8 115200
-```
 
 Test qmicli
 ```
