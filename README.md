@@ -42,6 +42,9 @@ cp -fr /home/$USER/sim7600/rootfs/lib/modules/* .
 
 Insert the SD card in the raspberry pi and boot.
 
+### Connect to the raspberry pi the waveshare module using a USB cable
+
+![](/images/connection.jpg?raw=true)
 
 ### Connect via Serial pins in the GPIO  using an UART-USB
 
