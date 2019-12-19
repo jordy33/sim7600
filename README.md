@@ -145,7 +145,7 @@ Sim Card Status:
 ```
 sudo qmicli --device=/dev/cdc-wdm0 --uim-get-card-status
 ```
-### Install Required Software
+### Installing Required Software
 
 ```
 sudo apt-get update && sudo apt-get install libqmi-utils udhcpc
