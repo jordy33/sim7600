@@ -6,21 +6,21 @@
 
 How to install
 
-* Clone this repository at home directory
+* Clone this repository at home directory in a PC with ubuntu
 
 ```
 cd ~
 git clone https://github.com/jordy33/sim7600.git
 ```
 
-* To install mount the sd card from raspbian in a PC with ubuntu
+* To install connect the SD card (image from the raspberry) to the pc using an USB adapter. 
 
-* Copy boot folder into boot partition
+* Copy boot folder (from the clone repository)  into boot partition
 ```
-Using Nautilus replace all the contents from the boot directory into the SD card on the boot partition
+Using Nautilus replace all the contents from the boot directory (that you copy from the repository) into the SD card on the boot partition
 ```
 
-Install Serial interfase
+Enabling the Serial interfase to access the raspberry pi via serial port.
 ```
 sudo nano /media/$USER/boot/config.txt
 ```
