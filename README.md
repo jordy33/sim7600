@@ -76,6 +76,9 @@ Port 4: Dev 4, If 5, Class=Vendor Specific Class, Driver=qmi_wwan, 480M
 ```
 
 Connect via  Serial using an UART-USB
+
+![](/images/rasp-uart.png?raw=true)
+
 ```
 sudo screen /dev/cu.usbserial-A506LNW8 115200
 ```
