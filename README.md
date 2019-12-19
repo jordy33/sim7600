@@ -48,15 +48,16 @@ Also set the yellow jumpers as shown in the picture
 
 ![](/images/connection.jpg?raw=true)
 
-### Connect via Serial pins in the GPIO  using an UART-USB
+### In the PC, Connect via USB-UART adapter to the raspberry pi using the GPIO pins
 
 ![](/images/rasp-uart.png?raw=true)
 
-Replace with your serial port the following command
+In the PC execute the following commands. Replace with your serial port.
 ```
+sudo apt-get install screen
 sudo screen /dev/cu.usbserial-A506LNW8 115200
 ```
-* Disconnect any cable in the ethernet port
+* In the raspberry pi Disconnect any cable in the ethernet port
 
 ### Installing Qualcomm QMI interface 
 
