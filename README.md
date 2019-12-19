@@ -49,6 +49,7 @@ Replace with your serial port te following command
 ```
 sudo screen /dev/cu.usbserial-A506LNW8 115200
 ```
+* Disconnect any cable in the ethernet port
 
 ### Installing Qualcomm QMI interface 
 
