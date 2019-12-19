@@ -51,7 +51,7 @@ sudo locale-gen en_US.UTF-8
 update-locale en_US.UTF-8
 ```
 
-Installing qmicli
+### Installing qmicli
 
 ```
 sudo apt-get update -y
@@ -64,6 +64,8 @@ cd libqmi-1.24.2/
 make
 sudo make install
 ```
+### Press the power button or pull low GPIO pin 4 to turn on the SIM7600 HAT
+
 Verify that you have the qmi_wwan driver
 ```
 lsusb -t
@@ -125,7 +127,6 @@ sudo qmicli --device=/dev/cdc-wdm0 --uim-get-card-status
 sudo apt-get update && sudo apt-get install libqmi-utils udhcpc
 ```
 
-### Press the power button or pull low GPIO pin 4 to turn on the SIM
 
 Putting online the adapter
 ```
