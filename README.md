@@ -20,7 +20,7 @@ git clone https://github.com/jordy33/sim7600.git
 Using Nautilus replace all the contents from the boot directory (that you copy from the repository) into the SD card on the boot partition
 ```
 
-Enabling the Serial interfase to access the raspberry pi via serial port.
+Enabling the Serial interface to access the raspberry pi via serial port.
 ```
 sudo nano /media/$USER/boot/config.txt
 ```
