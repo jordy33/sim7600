@@ -29,11 +29,8 @@ enable_uart=1
 
 * Copy rootfs folder into rootfs partition
 
-You cant use Nautilus. The rootfs only can be write by root
+You can't use Nautilus. The rootfs only can be write by root
 Do the following commands
-
-Connect to the raspberry using a serial connection
-
 
 ```
 sudo -i
@@ -41,10 +38,14 @@ cd /media/$USER/rootfs/lib/modules
 cp -fr /home/$USER/sim7600/rootfs/lib/modules/* .
 ``` 
 
-Connect via  Serial using an UART-USB
+Insert the SD card in the raspberry pi and boot.
+
+
+### Connect via Serial pins in the GPIO  using an UART-USB
 
 ![](/images/rasp-uart.png?raw=true)
 
+Replace with your serial port te following command
 ```
 sudo screen /dev/cu.usbserial-A506LNW8 115200
 ```
