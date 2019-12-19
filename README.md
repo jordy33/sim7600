@@ -52,14 +52,14 @@ Also set the yellow jumpers as shown in the picture
 
 ![](/images/rasp-uart.png?raw=true)
 
-In the PC execute the following commands. Replace with your serial port.
+In the PC execute the following commands to connect to the raspberry pi. Replace with your serial port.
 ```
 sudo apt-get install screen
 sudo screen /dev/cu.usbserial-A506LNW8 115200
 ```
 * In the raspberry pi Disconnect any cable in the ethernet port
 
-### Installing Qualcomm QMI interface 
+### Installin Qualcomm QMI interface in the raspberry pi
 
 Configure Locales
 ```
