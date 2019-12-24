@@ -1,1 +1,0 @@
-{USB_DEVICE(0x1E0E, 0x9001)}, 
